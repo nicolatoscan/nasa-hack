@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-between">
+  <!-- <div class="min-h-screen flex flex-col items-center justify-between">
     <nav class="w-full bg-gray-800 p-4 shadow-md">
       <div class="flex justify-center space-x-8 text-white">
         <RouterLink 
@@ -19,12 +19,12 @@ import { RouterLink, RouterView } from 'vue-router'
           to="/contact">Contact
         </RouterLink>
       </div>
-    </nav>
+    </nav> -->
 
-    <main class="flex-grow w-full max-w-4xl mx-auto p-6">
+    <main class="flex-grow w-full max-w-4xl mx-auto">
       <RouterView />
     </main>
-  </div>
+  <!-- </div> -->
 </template>
 
 <style scoped lang="scss">

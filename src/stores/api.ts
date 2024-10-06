@@ -34,7 +34,16 @@ const useAPIStore = defineStore('api', () => {
     return blob;
   }
 
-  return { getCampoColorato, getCampoMoisture, getVegetation }
+  async function getReflectance(latitude: number, longitude: number) {
+    const response = await ax.post('/reflectance',
+      { latitude, longitude },
+      { responseType: 'arraybuffer' }
+    )
+    const blob = new Blob([response.data], { type: 'image/jpeg' });
+    return blob;
+  }
+
+  return { getCampoColorato, getCampoMoisture, getVegetation, getReflectance }
 })
 
 export default useAPIStore;
